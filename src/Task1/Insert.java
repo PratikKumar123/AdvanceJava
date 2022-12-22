@@ -11,6 +11,7 @@ public class Insert {
 		Scanner sc = new Scanner(System.in);
 		Connection con = ConnectionManager.getConnection();
 		Statement stmt = con.createStatement();
+		
 		try {
 			System.out.println("Enter id number :");
 			int a = sc.nextInt();
@@ -21,11 +22,7 @@ public class Insert {
 			System.out.println("Enter your designation :");
 			String d = sc.next();
 			
-				
-			
-			 stmt.addBatch("INSERT INTO studdetails (id ,studName, Address,Designation) VALUES('" + a + "','" + b + "','" + c + "','" + d + "')");
-//			 stmt.addBatch("INSERT INTO studdetails (id ,studName, Address,Designation) VALUES(2,'Golu','Chennai','Nodejs')");
-//			 stmt.addBatch("INSERT INTO studdetails (id ,studName, Address,Designation) VALUES(3,'Pratik','gujrat','Nodejs')");
+			 stmt.addBatch("INSERT  INTO studdetails (id ,studName, Address,Designation) VALUES('" + a + "','" + b + "','" + c + "','" + d + "')");
 			 
 			 stmt.executeBatch();
 

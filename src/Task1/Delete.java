@@ -15,10 +15,11 @@ public class Delete {
 
 			if (check == 0) {
 				System.out.println("Not Deleted");
-			} else {
+			} 
+			else {
 				System.out.println("Deleted Successfully :");
 			}
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
